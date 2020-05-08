@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Block AdBlocker</title>
+</head>
+
+<body>
+    <div id="AdblockerModal" class="modalAdBlocker">
+        <div class="modalAdBlocker-content">
+            <div class="modalAdBlocker-header">
+                <span class="close">&times;</span>
+                <h2>Please turn OFF your Adblocker...</h2>
+            </div>
+            <div class="modalAdBlocker-body">
+                <p>If you like the information provided by us and you are not willing to harm our website as we do not intend to harm you, please turn off your AdBlocker,</p>
+                <p> so we can continue earning some money and pay the rent of the website at least. Eventually we might even be able to buy a beer to our dev team.</p>
+                <p><iframe width="560" height="315" src="https://www.youtube.com/embed/ndsaoMFz9J4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></p>
+                <p><img src="https://media1.tenor.com/images/2839cd3e0d0ffe234f9eaf890607e5a7/tenor.gif?itemid=13086110"></p>
+                <p>Our advertisements are provided thanks to Google Ads which guarantees your security.</p>
+                <p>NO PopUp's, NO Flashing stuff, NO Viruses!</p>
+            </div>
+            <div class="modalAdBlocker-footer">
+                <h3>THank you!</h3>
+            </div>
+        </div>
+    </div>
+    <footer>
+
+        <script>
+            window.adblockEnabled = true;
+        </script>
+        <script src="./adsframe.js"></script>
+        <script>
+            if (window.adblockEnabled) {
+                var modal = document.getElementById("AdblockerModal");
+                var span = document.getElementsByClassName("close")[0];
+                modal.style.display = "block";
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            }
+        </script>
+    </footer>
+</body>
+
+</html>
